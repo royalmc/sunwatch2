@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'weather/form'
 
-  get 'weather/display'
+  post 'weather/display'
 
   root 'weather#display'
 

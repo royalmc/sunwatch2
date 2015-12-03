@@ -1,2 +1,45 @@
-<h1>Weather#form</h1>
-<p>Find me in app/views/weather/form.html.erb</p>
+<div class="jumbotron">
+  <div class="container">
+			<div class="row">
+			  <div class="col-sm-12">
+					<h1>Sunwatch</h1>
+					<p>an application for finding out the weather</p>
+				 </div>
+			</div>
+  </div>
+</div>
+		<div class="row">
+    <div class="col-sm-12">
+        <% if notice %>
+	   <div class="alert alert-danger">
+                <p><%= notice %></p>
+            </div>
+		<% end %>
+		<%= form_tag weather_display_url do %>
+            <!-- all your form stuff -->
+        <% end %>
+    </div>
+</div>
+<div class="container">
+  <div class="row">
+		<div class="col-sm-12">
+		  <!--Stuff goes here!-->
+		  <%= form_tag weather_display_url do %>
+    <div class="row">
+				<div class="col-sm-8">
+				    <%= label_tag "city", "City", class: "control-label" %>
+				    <%= text_field_tag :city, nil, placeholder: "Enter a City", class: "form-control" %>
+				</div>
+				<div class="col-sm-4">
+				    <%= label_tag "state", "State", class: "control-label" %>
+				    <%= select_tag :state, options_for_select(@states), class: "form-control" %>
+				</div>
+			    </div>
+			    <hr/>
+			    <%= submit_tag "Submit!", class: "btn btn-primary" %>
+			<% end %>
+			</div>
+		</div>
+</div>
+
+
