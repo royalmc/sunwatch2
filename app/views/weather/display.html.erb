@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+    	<div class="col-sm-12">
+    <div class="well">
+        <h2><%= @res[:city] %>, <%= @res[:state] %> - <%= @res[:country] %></h2>
+        <h3><%= @res[:updated] %></h3>
+        <hr/>
+        <h3>
+            <img src="<%= @res[:weather_icon] %>" alt="<%= @res[:weather] %>"/>
+            <%= @res[:weather] %>
+        </h3>
+        <hr/>
+        <p class="lead">
+            <strong>Temp:</strong> <%= @res[:temp] %>
+        </p>
+        <p class="lead">
+            <strong>Wind:</strong> <%= @res[:wind] %>
+        </p>
+				<p>
+            <a href="<%= @res[:more_link] %>" class="btn btn-info">More Forecasts</a>
+            <a href="/" class="btn btn-default">Back Home</a>
+        </p>
+    </div>
+</div>
+			
+</div>
